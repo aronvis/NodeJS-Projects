@@ -1,4 +1,4 @@
-var http = require('http')
+var http = require('http');
 
 // Function called by the server
 function onRequest(request, response) {
