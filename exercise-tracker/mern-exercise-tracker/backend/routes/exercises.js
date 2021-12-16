@@ -62,9 +62,9 @@ router.route('/update/:id').post(async function(req, res){
         exercise.username = req.body.username;
         exercise.description = req.body.description;
         exercise.duration = Number(req.body.duration);
-        exercise.data = Data.parse(req.body.date);
+        exercise.date = Date.parse(req.body.date);
         await exercise.save();
-        res.json('Exercise updates.')
+        res.json('Exercise updated.')
 
     } catch(error) {
         res.status(400).json(`Error ${error}`);
